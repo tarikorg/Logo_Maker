@@ -26,12 +26,12 @@ inquirer.prompt(
 {
     type: 'input',
     name: 'textColor',
-    message: 'Enter text color (keyword or hexadecimal number):'
+    message: 'Enter text color (keyword or hexadecimal number example: #1231231):'
 },
 {
     type: 'input',
     name: 'shapeColor',
-    message: 'Enter shape color (keyword or hexadecimal number):'
+    message: 'Enter shape color (keyword or hexadecimal number example: #123123):'
 }
 
 
@@ -41,5 +41,16 @@ inquirer.prompt(
         userInput.shape,
         userInput.text,
         userInput.textColor,
+        userInput.shapeColor
     )
+
+    const svg = makeShape.createSVG()
+
+    fs.writeFile('./createdSvg/logo.svg', svg , function (err){
+        if(err){
+            console.log('error: ',err)
+        }else{
+            console.log('Generated logo.svg')
+        }
+    })
 })
