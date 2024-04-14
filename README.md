@@ -13,8 +13,8 @@
 
 
   ## Visuals
-  <img src="assets/images/readme-1.png">
-  <img src="assets/images/readme-2.png">
+  <img src="Images/image-1.png">
+  <img src="Images/image-2.png">
 
   # Description
   An app that lets user to create their own unique SVG logo(300x200px) with their given input(Shape,text, textcolor, shapeColor)
